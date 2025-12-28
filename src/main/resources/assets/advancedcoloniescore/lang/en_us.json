@@ -1,0 +1,18 @@
+{
+  "com.minecolonies.research.effects.blockhutbuilder.description": "Upgrade the Town maximum level!",
+
+  "com.advancedcoloniescore.research.setup.builder_unlock_1.name": "Age 1",
+  "com.advancedcoloniescore.research.setup.builder_unlock_1.subtitle": "Reach Age 1 by starting a colony!",
+
+  "com.advancedcoloniescore.research.setup.builder_unlock_2.name": "Age 2",
+  "com.advancedcoloniescore.research.setup.builder_unlock_2.subtitle": "Reach Age 2 by completing basic Tinkering!",
+
+  "com.advancedcoloniescore.research.setup.builder_unlock_3.name": "Age 3",
+  "com.advancedcoloniescore.research.setup.builder_unlock_3.subtitle": "Reach Age 3 by piercing the secret of magics!",
+
+  "com.advancedcoloniescore.research.setup.builder_unlock_4.name": "Age 4",
+  "com.advancedcoloniescore.research.setup.builder_unlock_4.subtitle": "Reach Age 4 by !",
+
+  "com.advancedcoloniescore.research.setup.builder_unlock_5.name": "Age 5",
+  "com.advancedcoloniescore.research.setup.builder_unlock_5.subtitle": "Reach Age 5 by starting a colony!"
+}

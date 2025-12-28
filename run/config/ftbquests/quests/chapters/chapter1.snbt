@@ -1,0 +1,44 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter1"
+	group: "15B807C7819DBACE"
+	id: "33817FE90F7E3600"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "3168A1959AB50B7B"
+			rewards: [{
+				id: "17EBE5D27015CDC3"
+				item: "minecraft:stripped_oak_log"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6C46B62B846BE7B3"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			id: "44FFDF888CE63B93"
+			tasks: [
+				{
+					id: "4A75FC045EBE3C90"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					biome: "minecraft:dark_forest"
+					id: "39C5C0324BF62D40"
+					type: "biome"
+				}
+			]
+			x: -1.0d
+			y: -3.5d
+		}
+	]
+	title: "chapter1"
+}

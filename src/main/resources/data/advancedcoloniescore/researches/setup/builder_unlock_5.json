@@ -1,0 +1,23 @@
+{
+  "branch": "minecolonies:civilian",
+  "parentResearch": "advancedcoloniescore:setup/builder_unlock_4",
+  "effects": [
+    {
+      "id": "minecolonies:effects/blockhutbuilder",
+      "level": 5
+    }
+  ],
+  "requirements": [
+    {
+      "type": "minecolonies:single-building",
+      "building": "minecolonies:townhall",
+      "level": 4
+    }
+  ],
+  "costs": [
+
+  ],
+  "researchLevel": 4,
+  "sortOrder": 0,
+  "subtitle": "com.advancedcoloniescore.research.setup.builder_unlock_5.subtitle"
+}
