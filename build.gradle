@@ -105,7 +105,13 @@ minecraft {
             workingDirectory project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'minecolonies'
+
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
         }
     }
 }
@@ -114,9 +120,25 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+
+    // Mods without dedicated Repos
+    maven {
+        name 'CurseMaven'
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
+    // Minecolonies
     maven {
         name 'LDTTeam - Modding'
         url 'https://ldtteam.jfrog.io/ldtteam/modding/'
+    }
+    // Mystical Agriculture
+    maven {
+        name 'BlakeBr0 - Modding'
+        url 'https://maven.blakesmods.com'
     }
     maven {
         name 'FTB Team'
@@ -136,10 +158,18 @@ dependencies {
     implementation(fg.deobf("com.ldtteam:blockui:${project.blockui_version}"))
     implementation(fg.deobf("com.ldtteam:domum_ornamentum:${project.domum_ornamentum_version}:universal"))
 
+    // FTB QUEST
     implementation(fg.deobf("dev.ftb.mods:ftb-quests-forge:${project.ftb_quests_version}"))
     implementation(fg.deobf("dev.ftb.mods:ftb-library-forge:${project.ftb_library_version}"))
     implementation(fg.deobf("dev.ftb.mods:ftb-teams-forge:${project.ftb_teams_version}"))
     implementation(fg.deobf("dev.architectury:architectury-forge:${project.architectury_version}"))
+
+    implementation fg.deobf("com.blakebr0.mysticalagriculture:MysticalAgriculture:${project.mystical_agriculture_version}")
+    implementation fg.deobf("com.blakebr0.cucumber:Cucumber:${project.cucumber_version}")
+
+    // --- Dépendance via CurseMaven (MATC) ---
+    implementation fg.deobf("curse.maven:mystical-agriculture-tiered-crystals-${project.matc_version}")
+    runtimeOnly fg.deobf("curse.maven:jei-${project.jei_version}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

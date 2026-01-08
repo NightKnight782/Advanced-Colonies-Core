@@ -22,3 +22,6 @@ gradle-app.setting
 /run/crash-reports
 /run/logs
 /run/saves
+/run-data
+
+/run/config
