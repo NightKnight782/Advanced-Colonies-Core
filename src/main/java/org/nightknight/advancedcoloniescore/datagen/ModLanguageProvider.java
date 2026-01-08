@@ -1,31 +1,73 @@
 package org.nightknight.advancedcoloniescore.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.LanguageProvider;
-import org.nightknight.advancedcoloniescore.Constants;
 
-public class ModLanguageProvider extends LanguageProvider
+public class ModLanguageProvider extends BaseLanguageProvider
 {
-    public ModLanguageProvider(PackOutput output)
+    public ModLanguageProvider(final PackOutput output, final ModLocales locale)
     {
-        super(output, Constants.MOD_ID, "en_us");
+        super(output, locale);
     }
 
     @Override
     protected void addTranslations()
     {
-        add("itemGroup.advancedcoloniescore", "Advanced Colonies Core");
+        add("itemGroup.advancedcoloniescore", locale -> "Advanced Colonies Core");
 
-        add("com.minecolonies.research.effects.blockhutbuilder.description", "Upgrade the Town maximum level!");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_1.name", "Age 1");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_1.subtitle", "Reach Age 1 by starting a colony!");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_2.name", "Age 2");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_2.subtitle", "Reach Age 2 by completing basic Tinkering!");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_3.name", "Age 3");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_3.subtitle", "Reach Age 3 by piercing the secret of magics!");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_4.name", "Age 4");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_4.subtitle", "Reach Age 4 by !");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_5.name", "Age 5");
-        add("com.advancedcoloniescore.research.setup.builder_unlock_5.subtitle", "Reach Age 5 by starting a colony!");
+        add("com.minecolonies.research.effects.blockhutbuilder.description", locale -> switch (locale)
+        {
+            case ENGLISH -> "Upgrade the Town maximum level!";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_1.name", locale -> switch (locale)
+        {
+            case ENGLISH -> "Age 1";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_1.subtitle", locale -> switch (locale)
+        {
+            case ENGLISH -> "Reach Age 1 by starting a colony!";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_2.name", locale -> switch (locale)
+        {
+            case ENGLISH -> "Age 2";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_2.subtitle", locale -> switch (locale)
+        {
+            case ENGLISH -> "Reach Age 2 by completing basic Tinkering!";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_3.name", locale -> switch (locale)
+        {
+            case ENGLISH -> "Age 3";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_3.subtitle", locale -> switch (locale)
+        {
+            case ENGLISH -> "Reach Age 3 by piercing the secret of magics!";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_4.name", locale -> switch (locale)
+        {
+            case ENGLISH -> "Age 4";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_4.subtitle", locale -> switch (locale)
+        {
+            case ENGLISH -> "Reach Age 4 by !";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_5.name", locale -> switch (locale)
+        {
+            case ENGLISH -> "Age 5";
+            case FRENCH -> "baguette";
+        });
+        add("com.advancedcoloniescore.research.setup.builder_unlock_5.subtitle", locale -> switch (locale)
+        {
+            case ENGLISH -> "Reach Age 5 by starting a colony!";
+            case FRENCH -> "baguette";
+        });
     }
 }
