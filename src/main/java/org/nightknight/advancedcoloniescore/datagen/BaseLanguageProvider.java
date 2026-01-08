@@ -1,9 +1,9 @@
 package org.nightknight.advancedcoloniescore.datagen;
 
-import com.minecolonies.api.util.constant.Constants;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.jetbrains.annotations.NotNull;
+import org.nightknight.advancedcoloniescore.Constants;
 
 import java.util.function.Function;
 
