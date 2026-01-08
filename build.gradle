@@ -106,12 +106,6 @@ minecraft {
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'minecolonies'
-
-            mods {
-                "${mod_id}" {
-                    source sourceSets.main
-                }
-            }
         }
     }
 }
@@ -157,6 +151,7 @@ dependencies {
     implementation(fg.deobf("com.ldtteam:structurize:${project.structurize_version}"))
     implementation(fg.deobf("com.ldtteam:blockui:${project.blockui_version}"))
     implementation(fg.deobf("com.ldtteam:domum_ornamentum:${project.domum_ornamentum_version}:universal"))
+    implementation(fg.deobf("com.ldtteam:datagenerators:${project.datagenerators_version}:universal"))
 
     // FTB QUEST
     implementation(fg.deobf("dev.ftb.mods:ftb-quests-forge:${project.ftb_quests_version}"))

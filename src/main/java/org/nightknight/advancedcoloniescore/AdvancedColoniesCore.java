@@ -18,7 +18,6 @@ public class AdvancedColoniesCore {
         IEventBus modEventBus = context.getModEventBus();
 
         modEventBus.addListener(this::preInit);
-        modEventBus.addListener(DataGenerators::gatherData);
     }
 
     /**
@@ -28,7 +27,6 @@ public class AdvancedColoniesCore {
      */
     public void preInit(@NotNull final FMLCommonSetupEvent event)
     {
-
         event.enqueueWork(() -> {
             IMinecoloniesAPI.getInstance().getEventBus().subscribe(ColonyCreatedModEvent.class, (ev) -> {
                 ev.getColony().getResearchManager().checkAutoStartResearch();

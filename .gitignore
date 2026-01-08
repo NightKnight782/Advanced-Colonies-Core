@@ -19,9 +19,9 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
-/run/crash-reports
-/run/logs
-/run/saves
+
+/run
 /run-data
 
-/run/config
+/src/generated/resources/.cache/
+/.idea/
