@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ModResearchProvider extends AbstractResearchProvider
 {
-    private static String Minecolonies_MOD_ID = com.minecolonies.api.util.constant.Constants.MOD_ID;
+    private static final String Minecolonies_MOD_ID = com.minecolonies.api.util.constant.Constants.MOD_ID;
 
     private static final ResourceLocation CIVIL  = ResourceLocation.fromNamespaceAndPath(Minecolonies_MOD_ID, "civilian");
     private static final ResourceLocation COMBAT = ResourceLocation.fromNamespaceAndPath(Minecolonies_MOD_ID, "combat");
